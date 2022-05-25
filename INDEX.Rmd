@@ -18,11 +18,56 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Presentacion
 
+En l 
+
 ## Entradas
+
+```{r importación de datos nacionales COVID-19}
+
+covid_nacional <-
+  read_delim(
+    file = "C:/Users/gf0604-1/graficacion estadistica/05_24_22_CSV_GENERAL.csv",
+    delim = ";",
+    col_select = c("FECHA", "positivos", "fallecidos", "RECUPERADOS", "activos")
+  )
+
+covid_nacional <-
+  covid_nacional %>%
+  select(fecha = FECHA,
+         positivos,
+         fallecidos,
+         recuperados = RECUPERADOS,
+         activos) %>%
+  mutate(fecha = as.Date(fecha, format = "%d/%m/%Y"))
+```
+
+
+```{r transformación de datos nacionales COVID-19}
+covid_nacional <-
+  covid_nacional %>%
+  select(fecha = FECHA,
+         positivos,
+         fallecidos,
+         recuperados = RECUPERADOS,
+         activos) %>%
+  mutate(fecha = as.Date(fecha, format = "%d/%m/%Y"))
+```
+
 
 ### Datos generales de casos
 
+```{r Visualizacion de datos covid nacionales}
+covid_nacional %>%
+  datatable(options = list(
+    pageLength = 15,
+    language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json')
+  ))
+```
+
+
 ## Procesamiento
+
+
 
 ### Opciones generales
 
