@@ -1,0 +1,54 @@
+---
+title: "analisis COVID-19 en Costa Rica del paquete ggplot2"
+author: "Ashley Jump"
+date: '2022-05-25'
+output: 
+  html_document:
+    theme: readable
+    toc: true
+    toc_depth: 5
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Presentacion
+
+## Entradas
+
+### Datos generales de casos
+
+## Procesamiento
+
+### Opciones generales
+
+### Curacion de datos
+
+## Salidas
+
+### Casos acumulados a nivel nacional
+
+#### Tabla
+
+#### Graficos de lineas
+
+#### Casos a nivel cantonal
+
+##### Positivos
+
+###### Tabla
+
+###### Grafico de barras
+
+
+
+
+
+
+
+
+
